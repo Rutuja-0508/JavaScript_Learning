@@ -1,0 +1,46 @@
+///////////////////////////////////////
+//
+// Function Name : RangeDisplayEven
+// Description   : Displays all even numbers between given range
+// Input         : Two Integers
+// Output        : Even numbers between range
+// Author        : Rutuja Patil
+// Date          : 13/11/2026
+//
+///////////////////////////////////////
+
+const prompt = require('prompt-sync')()
+
+function RangeDisplayEven(iStart, iEnd)
+{
+   let sOutput = ""
+   let iCnt = 0
+
+   if(iStart > iEnd)
+   {
+      console.log("Invalid range")
+      return
+   }
+
+   for(iCnt = iStart; iCnt <= iEnd; iCnt++)
+   {
+      if(iCnt % 2 == 0)
+      {
+         sOutput += iCnt + "\t"
+      }
+   }
+   console.log(sOutput)
+}
+
+function main()
+{
+   let iValue1 = 0, iValue2 = 0
+
+   iValue1 = parseInt(prompt("Enter starting point : "))
+
+   iValue2 = parseInt(prompt("Enter ending point : "))
+
+   RangeDisplayEven(iValue1, iValue2)
+}
+
+main()
