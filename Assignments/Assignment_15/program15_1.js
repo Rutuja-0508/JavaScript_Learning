@@ -20,7 +20,7 @@ function main()
 {
    let Name = ""
 
-   Name = prompt("Please enter full name: ").trim().slice(0, 29)    // scanf(" %29[^\n]") reads at most 29 characters
+   Name = prompt("Please enter full name: ").trim().slice(0, 29)   
 
    DisplayName(Name)
 }
